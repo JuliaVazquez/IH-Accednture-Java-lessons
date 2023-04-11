@@ -164,7 +164,7 @@ public class Main {
     }
 
 
-    // Lab Day 1
+    // Checking for understanding Day 1
     public static String productFormatter(String productName,String date){
         // productName trimmed, spaces=_, date at the end, uppercase
         return productName.concat(date).trim().replace(" ","_").toUpperCase();

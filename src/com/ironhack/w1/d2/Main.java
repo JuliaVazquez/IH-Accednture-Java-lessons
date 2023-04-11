@@ -107,6 +107,12 @@ public class Main {
         newArray[5] = 5;
         System.out.println(Arrays.toString(newArray));
 
+
+// Exercises check-out:
+        int[] checkArray = {5,4,3,2,1};
+        System.out.println("Exercise 1: multiply array: " + Arrays.toString(multiplyArray(checkArray)));
+        int[] check2 = {1,2,3,4,5};
+        System.out.println("Exercise 2: invert array: " + Arrays.toString(invertArray(check2)));
     }
 
     public static String[] createSubjectsArray(){
@@ -118,5 +124,26 @@ public class Main {
         subjects[4] = "Química";
 
         return subjects;
+    }
+
+//  Checking for understanding Day 2
+    // 1: multiply each number by the next one in the array
+    public static int[] multiplyArray(int[] array){
+        int[] newArray = new int[array.length];
+        newArray[newArray.length-1] = array[array.length-1] * array[0];
+        for (int i = 0; i < array.length - 1; i++){
+            newArray[i] = array[i]*array[i+1];
+        }
+        return newArray;
+    }
+
+    // 2: invert an array
+    public static int[] invertArray(int[] array){
+        int[] newArray = new int[array.length];
+
+        for (int i = 0; i < array.length; i++){
+            newArray[i] = array[(array.length-1)-i];
+        }
+        return newArray;
     }
 }
