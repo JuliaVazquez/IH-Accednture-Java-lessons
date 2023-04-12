@@ -1,5 +1,8 @@
 package com.ironhack.w1.d3;
 
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
 public class Main {
     public static void main(String[] args) {
         Movie harryPotter = new Movie("Harry Potter", 120);
@@ -24,8 +27,22 @@ public class Main {
         scream.play();
 
 //  Exercises day 3:
-//  1. Create a program that reads from standard input a string and prints the count of the words that start with a vowel. Skipping all the words that don’t start with a vowel and printing it as an error.
+//  1. Create a program that reads from standard input a string and prints the count of the words that start with a vowel. 
+//  Skipping all the words that don’t start with a vowel and printing it as an error.
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("What's on your mind?");
+        String inputString = myScanner.nextLine();
 
+        String[] newArray = inputString.split(" ");
+        String vowels = "^[aeiouAEIOU].*";
+
+        for (String word : newArray) {
+            if (Pattern.matches(vowels,word)){
+                System.out.println(word);
+            } else {
+                System.err.println("This word doesn't begin with a vowel");
+            }
+        }
 
 //  2. Create a program that reads the file called oscar_age_female.csv containing the data below who have the columns Index, Year, Age, Name, Movie in format csv read it print it in a new file called result.txt in the following format.
         /*Name: <name>
@@ -35,8 +52,7 @@ public class Main {
                 ===============*/
 
 //  3. Suppose you are building a university registration application where students can track and select courses.
-//
-//  Create and instantiate a Course class with the fields classId, capacity, studentCount, and title and all getters and setters.
+
 
 
     }
