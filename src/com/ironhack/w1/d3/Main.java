@@ -22,6 +22,23 @@ public class Main {
         System.out.println(scream.getTitle() + " " + scream.isReallyScary());
         System.out.println(scream);
         scream.play();
+
+//  Exercises day 3:
+//  1. Create a program that reads from standard input a string and prints the count of the words that start with a vowel. Skipping all the words that don’t start with a vowel and printing it as an error.
+
+
+//  2. Create a program that reads the file called oscar_age_female.csv containing the data below who have the columns Index, Year, Age, Name, Movie in format csv read it print it in a new file called result.txt in the following format.
+        /*Name: <name>
+                Year: <year>
+                Age: <age>
+                Movie: <movie>
+                ===============*/
+
+//  3. Suppose you are building a university registration application where students can track and select courses.
+//
+//  Create and instantiate a Course class with the fields classId, capacity, studentCount, and title and all getters and setters.
+
+
     }
 
 /*    public static Movie movieCreator(String title, int duration){
